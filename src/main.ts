@@ -16,6 +16,7 @@ const main = () => {
     new List('#app', petList),
     new Footer('#app'),
   ];
+  console.log(components);
 };
 
 main();
