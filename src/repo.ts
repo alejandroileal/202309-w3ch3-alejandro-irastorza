@@ -20,7 +20,7 @@ export const repo = () => {
       id: crypto.randomUUID(),
       name: 'Travis',
       breed: 'Border collie',
-      isAdopted: false,
+      isAdopted: true,
       owner: 'Alejandro Campos',
     },
   ];

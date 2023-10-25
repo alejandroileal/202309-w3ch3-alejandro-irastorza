@@ -4,7 +4,14 @@ import { repo } from './repo';
 const listedPets = repo();
 
 export const list = (pets: Pet) => {
-  const template = `<li id="">${pets.name}</li>`;
+  const template = `<ul>
+  <li id=""><p>Id: ${pets.id}</p></li>
+  <li id=""><p>Nombre: ${pets.name}</p></li>
+  <li id=""><p>Dueño: ${pets.owner}</p></li>
+   <li id=""><p>Procedencia: ${
+     pets.isAdopted ? 'Adoptado' : 'No adoptado'
+   }</p></li>
+  </ul>`;
 
   return template;
 };
