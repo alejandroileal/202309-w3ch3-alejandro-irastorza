@@ -1,6 +1,12 @@
-export const renderHeader = (parentElement: HTMLElement) => {
-  parentElement.innerHTML += `
-  <header><h1>Pet List</h1></header>`;
+import { Component } from './Component';
+export class Header extends Component {
+  constructor(selector: string) {
+    super(selector);
+    this.template = this.createTemplate();
+    this.render();
+  }
 
-  return parentElement;
-};
+  createTemplate() {
+    return `<header><h1>Pet List</h1></header>`;
+  }
+}

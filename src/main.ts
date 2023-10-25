@@ -1,15 +1,21 @@
-import { renderFooter } from './Footer';
-import { renderHeader } from './Header';
-import { renderList } from './Lista';
+import { Footer } from './Footer';
+import { Header } from './Header';
+import { List } from './Lista';
+import { repo } from './repo';
 
 const main = () => {
   console.log('Loaded Main 😺');
 
-  const domAppElement = document.querySelector<HTMLDivElement>('#app');
+  // RenderHeader(domAppElement);
+  // renderList(domAppElement);
+  // renderFooter(domAppElement);
 
-  renderHeader(domAppElement);
-  renderList(domAppElement);
-  renderFooter(domAppElement);
+  const petList = repo();
+  const components = [
+    new Header('#app'),
+    new List('#app', petList),
+    new Footer('#app'),
+  ];
 };
 
 main();
