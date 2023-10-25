@@ -7,6 +7,6 @@ export class Header extends Component {
   }
 
   createTemplate() {
-    return `<header><h1>Pet List</h1></header>`;
+    return `<header><h1>Pet List 😺</h1></header>`;
   }
 }
