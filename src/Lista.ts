@@ -40,12 +40,14 @@ export class List extends Component {
   createTemplate() {
     let list = `<ul class"pet-list">`;
     list += this.data.map(
-      (pet) => `<li><p>Id: ${pet.id}</p></li>
+      (pet) => `<ul class"${pet.name}-list"><li><p>Id: ${pet.id}</p></li>
                 <li><p>Nombre: ${pet.name}</p></li>
                 <li><p>Dueño: ${pet.owner}</p></li>
                 <li><p>Procedencia: ${
                   pet.isAdopted ? 'Adoptado' : 'No adoptado'
-                }</p></li>`
+                }</p></li>
+                <li><button class="edit-button">Edit</button><button class="delete-button">Delete</button></ul>
+</li>`
     );
     list += `</ul>`;
     return list;
